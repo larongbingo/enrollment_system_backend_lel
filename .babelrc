@@ -1,0 +1,27 @@
+{
+  "presets": [
+      [
+        "@babel/env", 
+        {
+          "targets": {
+            "node": true
+          },
+          "debug": true
+        }
+      ],
+      "@babel/typescript"
+  ],
+  "plugins": [
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      ["@babel/proposal-class-properties", {"loose": true}],
+      "@babel/proposal-object-rest-spread",
+      ["module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "@database": "./src/database",
+          "@middlewares": "./src/middlewares",
+          "@lib": "./src/lib"
+        }
+      }]
+  ]
+}
