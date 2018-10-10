@@ -1,4 +1,4 @@
-import { Model, Column, DataType, Table, Default, AllowNull, HasOne } from 'sequelize-typescript';
+import { Model, Column, DataType, Table, Default, AllowNull, ForeignKey } from 'sequelize-typescript';
 import { sign, decode } from 'jsonwebtoken';
 import { generate } from 'randomstring';
 
@@ -47,7 +47,7 @@ export class Token extends Model<Token> {
    * @see User
    */
   @AllowNull(true)
-  @HasOne(() => User)
+  @ForeignKey(() => User)
   @Column(DataType.STRING)
   userID: string;
 
