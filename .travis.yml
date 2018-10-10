@@ -29,6 +29,9 @@ before_install:
   - sudo service mysql restart
   - sudo mysql -e "CREATE DATABASE enrollment_system;" -u root -proot
   - npm install
-  
+
 script:
   - npm run test
+
+after_success:
+  - npm run coverage
