@@ -1,5 +1,6 @@
-import { Table, Column, Model, DataType, Default, PrimaryKey, AllowNull, BeforeCreate, Unique, BeforeUpdate } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, Default, PrimaryKey, AllowNull, BeforeCreate, Unique, BeforeUpdate, HasMany } from 'sequelize-typescript';
 import { compare, genSalt, hash } from 'bcrypt';
+import { Token } from './token.model';
 
 /**
  * Represents the people who will require access to the data stored
@@ -72,6 +73,20 @@ export class User extends Model<User> implements UserFields {
 
     return User.findOne({ where: { username: username } })
     .then(async user => user ? false : true);
+  }
+
+  /**
+   * Checks whether the given email is unique
+   * @param email the email that needs to be checked
+   * @returns Returms true of the email is unique, false otherwise
+   */
+  public static async IsEmailUnique(email: string) {
+    if(!email || email.length <= 0) {
+      return false;
+    }
+
+    return User.findOne({ where: { email: email } })
+    .then(async email => email ? false : true);
   }
 
   /**
