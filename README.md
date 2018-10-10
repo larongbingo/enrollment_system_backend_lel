@@ -1,7 +1,7 @@
 
 # Enrollment System - Student Portal (backend)
 
-![AGPL_30](https://img.shields.io/badge/License-AGPL--3.0-lightgrey.svg)
+[![AGPL_30](https://img.shields.io/badge/License-AGPL--3.0-lightgrey.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 [![Coverage Status](https://coveralls.io/repos/github/larongbingo/enrollment_system_backend_lel/badge.svg?branch=master)](https://coveralls.io/github/larongbingo/enrollment_system_backend_lel?branch=master)
 [![Build Status](https://travis-ci.com/larongbingo/enrollment_system_backend_lel.svg?branch=master)](https://travis-ci.com/larongbingo/enrollment_system_backend_lel)
 [![Greenkeeper badge](https://badges.greenkeeper.io/larongbingo/enrollment_system_backend_lel.svg)](https://greenkeeper.io/)
