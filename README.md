@@ -1,6 +1,7 @@
 # Enrollment System - Student Portal (backend)
 
-![AGPL_30](https://img.shields.io/badge/License-AGPL--3.0-lightgrey.svg)[![Coverage Status](https://coveralls.io/repos/github/larongbingo/enrollment_system_backend_lel/badge.svg?branch=master)](https://coveralls.io/github/larongbingo/enrollment_system_backend_lel?branch=master)
+![AGPL_30](https://img.shields.io/badge/License-AGPL--3.0-lightgrey.svg)
+[![Coverage Status](https://coveralls.io/repos/github/larongbingo/enrollment_system_backend_lel/badge.svg?branch=master)](https://coveralls.io/github/larongbingo/enrollment_system_backend_lel?branch=master)
 [![Build Status](https://travis-ci.com/larongbingo/enrollment_system_backend_lel.svg?branch=master)](https://travis-ci.com/larongbingo/enrollment_system_backend_lel)
 
 A project to get experience using CI and tools for testing.
