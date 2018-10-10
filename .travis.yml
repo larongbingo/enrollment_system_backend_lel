@@ -28,7 +28,6 @@ before_install:
   - sudo mysql_upgrade -u root -proot
   - sudo service mysql restart
   - sudo mysql -e "CREATE DATABASE enrollment_system; ALTER DATABASE enrollment_system CHARACTER SET utf8 COLLATE utf8_bin;" -u root -proot
-  - npm install
 
 script:
   - npm run test
