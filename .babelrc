@@ -20,7 +20,8 @@
         "alias": {
           "@database": "./src/database",
           "@middlewares": "./src/middlewares",
-          "@lib": "./src/lib"
+          "@lib": "./src/lib",
+          "@validators": "./src/validators"
         }
       }]
   ]
