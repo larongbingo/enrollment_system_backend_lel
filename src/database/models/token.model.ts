@@ -1,4 +1,4 @@
-import { Model, Column, DataType, Table, Default, AllowNull } from 'sequelize-typescript';
+import { Model, Column, DataType, Table, Default, AllowNull, HasOne } from 'sequelize-typescript';
 import { sign, decode } from 'jsonwebtoken';
 import { generate } from 'randomstring';
 
@@ -44,10 +44,12 @@ export enum TokenType {
 export class Token extends Model<Token> {
   /**
    * The identifier of the user that was linked to this token
+   * @see User
    */
   @AllowNull(true)
+  @HasOne(() => User)
   @Column(DataType.STRING)
-  userID: User;
+  userID: string;
 
   /**
    * The type of the token
