@@ -57,9 +57,8 @@ export class User extends Model<User> implements UserFields {
   @AllowNull(false)
   @Column(DataType.STRING)
   password: string
-  
+
   @HasMany(() => Token)
-  @Column
   tokens: Token[];
 //#endregion
 
