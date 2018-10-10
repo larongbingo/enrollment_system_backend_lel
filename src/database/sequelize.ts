@@ -24,10 +24,6 @@ export const sequelizeInstance: Sequelize = new Sequelize({
 
 sequelizeInstance.addModels([User, Token, Log]);
 
-//sequelizeInstance.addModels([User]);
-//sequelizeInstance.addModels([Token]);
-//sequelizeInstance.addModels([Log]);
-
 /**
  * Holds all of the Sequelize Models
  */
