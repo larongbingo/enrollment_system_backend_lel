@@ -15,10 +15,6 @@ addons:
       - mysql-server
       - mysql-client
 
-cache:
-  directories:
-    "node_modules"
-
 env:
   - MYSQL_DATABASE_NAME=enrollment_system MYSQL_USERNAME=root MYSQL_PASSWORD=root NODE_ENV=testing JWT_PASSWORD=ThisIsATest
 
