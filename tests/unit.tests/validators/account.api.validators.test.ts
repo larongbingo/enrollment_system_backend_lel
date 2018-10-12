@@ -3,8 +3,6 @@ import { mockReq } from 'sinon-express-mock';
 import { expect } from 'chai';
 import 'mocha';
 
-import { RegisterAPIValidator } from '../../../src/validators/account.api.router.validators';
-
 export function AccountAPIValidatorsTest() {
   
   describe('AccountAPIValidators Test', function() {
