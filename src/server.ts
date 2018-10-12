@@ -5,19 +5,20 @@
 
 import { HttpError } from "http-errors";
 import { ExpressApp } from './app';
-import { readFileSync } from 'fs';
 import http from 'http';
 
 /**
  * Get port from environment and store in Express.
  */
 var port = normalizePort(process.env.PORT || '3000');
-ExpressApp.set('port', port);
+ExpressApp.setConfig(function(app) {
+  app.set('port', port);
+});
 
 /**
  * Create HTTP server.
  */
-var server = http.createServer(ExpressApp);
+var server = http.createServer(ExpressApp.build());
 
 /**
  * Listen on provided port, on all network interfaces.
