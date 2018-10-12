@@ -1,5 +1,6 @@
 import { interfaces, controller, httpDelete, requestParam, response, httpPost, httpPut, request } from 'inversify-express-utils';
 import { Response, Request } from 'express';
+import 'reflect-metadata';
 
 @controller('/account')
 export class AccountController implements interfaces.Controller {
