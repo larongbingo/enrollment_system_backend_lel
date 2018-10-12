@@ -7,27 +7,43 @@ export class AccountController implements interfaces.Controller {
   constructor() { }
 
   @httpPost('/login')
-  private logIn(@request() req: Request, @response() res: Response) {
+  protected logIn(@request() req: Request, @response() res: Response) {
     
   }
 
   @httpPost('/logout')
-  private logOut(@request() req: Request, @response() res: Response) {
+  protected logOut(@request() req: Request, @response() res: Response) {
 
   }
   
   @httpPut("/register")
-  private register(@request() req: Request, @response() res: Response) {
+  protected register(@request() req: Request, @response() res: Response) {
+    this.registerValidation(req);
+  }
 
+  protected registerValidation(req: Request) {
+    req.check('firstName', 'First Name is empty').notEmpty();
+    req.check('middleName', 'Middle Name is empty').notEmpty();
+    req.check('lastName', 'Last Name is empty').notEmpty();
+    req.check('guardian', 'Guardian is empty').notEmpty();
+    req.check('address', 'Address is empty').notEmpty();
+    req.check('email', 'Email is empty').notEmpty();
+    req.check('phoneNumber', 'Phone Number is empty').notEmpty();
+    req.check('username', 'Username is empty').notEmpty();  
+    req.check('confirmPassword', 'Confirm Password is empty').notEmpty();
+    req.check('password', 'Password is empty').notEmpty();
+  
+    req.check('password', 'Password does not match with Confirm Password').equals(req.body.confirmPassword);
+    req.check('email', 'Email is not valid').isEmail();
   }
 
   @httpPost("/update")
-  private update(@request() req: Request, @response() res: Response) {
+  protected update(@request() req: Request, @response() res: Response) {
 
   }
 
   @httpDelete("/delete")
-  private delete(@requestParam("token") token: string, @response() res: Response) {
+  protected delete(@requestParam("token") token: string, @response() res: Response) {
 
   }
 
