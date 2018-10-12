@@ -46,7 +46,7 @@
     "@types/jsonwebtoken": "^7.2.8",
     "@types/mocha": "^5.2.5",
     "@types/morgan": "^1.7.35",
-    "@types/node": "10.11.6",
+    "@types/node": "^10.11.7",
     "@types/randomstring": "^1.1.6",
     "@types/sequelize": "^4.27.26",
     "@types/sinon-chai": "^3.2.0",
