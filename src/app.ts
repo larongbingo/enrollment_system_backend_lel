@@ -8,6 +8,7 @@ import path from 'path';
 import logger from 'morgan';
 import helmet from 'helmet';
 import express from 'express';
+import passport from 'passport';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import expressSession  from 'express-session';
@@ -68,6 +69,12 @@ app.use(expressSession({
   saveUninitialized: false,
   resave: false
 }));
+
+// Passport Setup
+app.use(passport.initialize());
+
+// Passport session
+app.use(passport.session());
 
 // Routes
 //ApplyRoutes(app);
