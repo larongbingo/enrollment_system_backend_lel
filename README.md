@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.com/larongbingo/enrollment_system_backend_lel.svg?branch=master)](https://travis-ci.com/larongbingo/enrollment_system_backend_lel)
 [![Greenkeeper badge](https://badges.greenkeeper.io/larongbingo/enrollment_system_backend_lel.svg)](https://greenkeeper.io/)
 
-A project to get experience using CI and tools for testing.
+A project to get experience using CI, testing, DI, and IoC.
 
 ## How to use
 Run the following commands
